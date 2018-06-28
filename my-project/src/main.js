@@ -6,10 +6,12 @@ import router from './router'
 // 解决click300ms问题  npm install fastclick --save
 import fastclick from 'fastclick'
 // 初始化css
-import './assets/styles/reset.css'
+// webpack.base.conf.js 中配置了'styles': resolve('src/assets/styles')
+import 'styles/reset.css'
 // 解决1border问题
-import './assets/styles/border.css'
-
+import 'styles/border.css'
+// 使用iconfont
+import 'styles/iconfont.css'
 Vue.config.productionTip = false
 // 把fastclick绑定到body上
 fastclick.attach(document.body)
