@@ -5,6 +5,8 @@ import App from './App'
 import router from './router'
 // 解决click300ms问题  npm install fastclick --save
 import fastclick from 'fastclick'
+// 使用swiper
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 // 初始化css
 // webpack.base.conf.js 中配置了'styles': resolve('src/assets/styles')
 import 'styles/reset.css'
@@ -12,9 +14,12 @@ import 'styles/reset.css'
 import 'styles/border.css'
 // 使用iconfont
 import 'styles/iconfont.css'
+// require styles
+import 'swiper/dist/css/swiper.css'
 Vue.config.productionTip = false
 // 把fastclick绑定到body上
 fastclick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

@@ -4,3 +4,4 @@
 使用fastclick 解决点击事件延迟300ms `npm install fastclick --save`
 使用style `npm install style --save`
 使用style-loader `npm install style-loader --save`
+使用swiper npm install vue-awesome-swiper --save
