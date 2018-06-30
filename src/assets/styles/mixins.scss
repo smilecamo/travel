@@ -1,0 +1,6 @@
+// 文字超出隐藏
+@mixin textWrap {
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+}
