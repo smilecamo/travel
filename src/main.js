@@ -7,6 +7,8 @@ import router from './router'
 import fastclick from 'fastclick'
 // 使用swiper
 import VueAwesomeSwiper from 'vue-awesome-swiper'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
 // 初始化css
 // webpack.base.conf.js 中配置了'styles': resolve('src/assets/styles')
 import 'styles/reset.css'
@@ -20,6 +22,8 @@ Vue.config.productionTip = false
 // 把fastclick绑定到body上
 fastclick.attach(document.body)
 Vue.use(VueAwesomeSwiper)
+Vue.use(VueAxios, axios)
+Vue.prototype.HOST = '/api'
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
