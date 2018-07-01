@@ -10,11 +10,18 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
+      // '/api': {
+      //   target: 'https://api.douban.com/v2', //源地址
+      //   changeOrigin: true, //是否跨域
+      //   pathRewrite: {
+      //     '^/api': '' //路径重写
+      //   }
+      // }
       '/api': {
-        target: 'https://api.douban.com/v2', //源地址
+        target: 'http://localhost:8080', //源地址
         changeOrigin: true, //是否跨域
         pathRewrite: {
-          '^/api': '' //路径重写
+          '^/api': '/static/mock/' //路径重写
         }
       }
     },
