@@ -35,7 +35,6 @@ export default {
         .then(result => {
           let res = result.data
           this.swipweList = res.subjects
-          console.log(res.subjects)
         })
     }
   },
