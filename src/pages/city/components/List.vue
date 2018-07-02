@@ -7,18 +7,6 @@
           <div class="btn-wrap">
             <div class="btn">北京</div>
           </div>
-          <div class="btn-wrap">
-            <div class="btn">北京</div>
-          </div>
-          <div class="btn-wrap">
-            <div class="btn">北京</div>
-          </div>
-          <div class="btn-wrap">
-            <div class="btn">北京</div>
-          </div>
-          <div class="btn-wrap">
-            <div class="btn">北京</div>
-          </div>
         </div>
       </div>
       <div class="area">
@@ -30,7 +18,11 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item,key) of cities" :key="key">
+      <div class="area"
+      v-for="(item,key) of cities"
+      :key="key"
+      :ref="key"
+      >
         <div class="title border-topbottom">{{key}}
         </div>
         <div class="item-list">
@@ -51,11 +43,24 @@ export default {
   name: 'HomeList',
   props: {
     cities: Object,
-    hotCitie: Array
+    hotCitie: Array,
+    letter: String
   },
   mounted () {
     // 获取dom
     this.scroll = new Bscroll(this.$refs.wrapper)
+  },
+  watch: {
+    letter () {
+      // A B
+      console.log(this.letter)
+      if (this.letter) {
+        const element = this.$refs[this.letter][0]
+        // console.log(element)
+        // scroll 滚动到那里
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
