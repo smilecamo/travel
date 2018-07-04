@@ -52,12 +52,8 @@ export default {
   },
   watch: {
     letter () {
-      // A B
-      console.log(this.letter)
       if (this.letter) {
         const element = this.$refs[this.letter][0]
-        // console.log(element)
-        // scroll 滚动到那里
         this.scroll.scrollToElement(element)
       }
     }

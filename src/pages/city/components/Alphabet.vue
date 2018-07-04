@@ -39,9 +39,8 @@ export default{
     this.startY = this.$refs['A'][0].offsetTop
   },
   methods: {
+
     handleClick (e) {
-      // 字母 触发事件给父级传输数据 然后传给子组件
-      // console.log(e.target.innerHTML)
       this.$emit('change', e.target.innerHTML)
     },
     handleTouchStart () {
@@ -55,6 +54,7 @@ export default{
         }
         this.timer = setTimeout(() => {
           // 当前手指到顶部的高度 79 上面输入框的高度
+          // 手指距离顶部的距离
           const touchY = e.touches[0].clientY - 79
           // 当前字母的下标
           const index = Math.floor((touchY - this.startY) / 20)
