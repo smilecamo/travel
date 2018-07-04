@@ -5,7 +5,8 @@
       v-model="keyword"
       class="search-input"
       type="text"
-      placeholder="请输入城市名或拼音">
+      placeholder="请输入城市名或拼音"
+      >
     </div>
     <div class="search-content" ref="search" v-show='keyword'>
       <ul>
